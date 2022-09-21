@@ -1,3 +1,14 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 2.7.0"
+      configuration_aliases = [ aws.management_account ]
+    }
+  }
+}
+
+
 # https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html
 data "aws_iam_policy_document" "assume_role" {
   statement {
