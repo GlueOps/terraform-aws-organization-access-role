@@ -1,4 +1,10 @@
-
+terraform {
+  required_providers {
+    aws = {
+      source = "terraform-registry-proxy.gpkg.io/hashicorp/aws"
+    }
+  }
+}
 
 
 # https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html
